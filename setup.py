@@ -8,7 +8,7 @@ from package_name import version
 NAME = "your package name"
 AUTHOR = "your name"
 EMAIL = "your mail"
-URL = "your project name"
+URL = "your project url"
 LICENSE = "your license"
 DESCRIPTION = "your project description"
 
