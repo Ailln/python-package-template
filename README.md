@@ -1,6 +1,6 @@
 # Python Package Template
 
-📦 一个快速搭建 Python Package 的模版。
+📦 一个快速搭建 Python Package 的模版～
 
 ## 使用方法
 
@@ -27,15 +27,15 @@
 
 5. 上传到 PyPi（需要注册）。
 
-```bash
-bash upload_pypi.sh
-```
+    ```bash
+    bash upload_pypi.sh
+    ```
 
 6. 更新到 Github。
 
-```bash
-git push
-```
+    ```bash
+    git push
+    ```
 
 ## 文件目录
 
