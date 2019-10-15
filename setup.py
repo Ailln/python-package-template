@@ -34,7 +34,7 @@ if __name__ == "__main__":
         },
         package_data={
             # change $package_name to your package name.
-            '$package_name': ['$package_name/src/*.txt']
+            "$package_name": ["src/*.txt"]
         },
         zip_safe=True,
         classifiers=[
