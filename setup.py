@@ -39,5 +39,6 @@ if __name__ == "__main__":
             # change $license to your license.
             "License :: OSI Approved :: $license",
             "Operating System :: OS Independent",
-        ]
+        ],
+        python_requires=">=3.6"
     )
