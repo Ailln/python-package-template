@@ -4,28 +4,31 @@
 
 ## 使用方法
 
-1. 点击本项目右上角的绿色按钮 `Use this template`（使用此模板），输入名称和说明，完成创建。
+1. 点击本项目右上角的绿色按钮 `Use this template`（使用此模板），输入名称和说明，完成创建；
 
-2. 将项目克隆到本地，这里以本项目为例，实际操作时这里需要替换你自己的项目。
+2. 将项目克隆到本地，这里以本项目为例，实际操作时这里需要替换你自己的项目；
 
     ```bash
     git clone https://github.com/HaveTwoBrush/python-package-template.git --depth 1
     ```
 
-3. 修改配置，文件中有提示。
+3. 修改配置，文件中有提示；
 
     ```bash
     cd python-package-template
-    # 将下文中的 your_package_name 改成你的实际项目名称
+   
+    # 1. 将下文中的 your_package_name 改成你的实际项目名称
     mv package_name your_package_name
-    # 接下来修改 `setup.py` 中的参数，里面有提示。
+   
+    # 2. 接下来修改 `setup.py /package_name/shell/usage.py`中的参数，里面有提示。
     
-    # 最后修改 `README.md` 为你的项目介绍，也就是你当前在读的这个文本。
+    # 3. 最后 `README.md` 修改为你的项目介绍，也就是你当前在读的这个文本。
     ```
 
-4. 编写你的 Package 代码。
+4. 编写你的 Package 代码；
 
-5. 上传到 PyPi（需要注册）。
+5. 上传到 PyPi（需要注册），参考[如何发布自己的包到 pypi](https://www.v2ai.cn/python/2018/07/30/PY-1.html)
+；
 
     ```bash
     bash upload_pypi.sh
@@ -49,7 +52,8 @@
 │   │   └── temp.txt
 │   └── version.py # 版本号
 ├── setup.py # 安装配置
-├── requirements.txt # 依赖
+├── requirements.txt # 包依赖
+├── requirements_dev.txt # 开发依赖
 ├── README.md # 项目文档
 ├── LICENSE # 这里面的内容为本项目的 License，你需要手动替换它。
 ├── .gitignore

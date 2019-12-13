@@ -108,6 +108,8 @@ venv.bak/
 
 # setup
 files.txt
+dist
+*.egg-info
 
 # vscode
 .vscode
