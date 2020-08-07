@@ -31,7 +31,7 @@
 ；
 
     ```bash
-    bash upload_pypi.sh
+    bash scripts/upload_pypi.sh
     ```
 
 6. 更新到 Github。
@@ -67,6 +67,7 @@
 ## TODO
 
 - [ ] 增加自动修改 `package name` 的脚本。
+- [ ] 增加 test 相关代码。
 
 ## 参考
 
