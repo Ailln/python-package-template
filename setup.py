@@ -36,8 +36,7 @@ if __name__ == "__main__":
         zip_safe=True,
         classifiers=[
             "Programming Language :: Python :: 3",
-            # change $license to your license.
-            "License :: OSI Approved :: $license",
+            f"License :: OSI Approved :: {LICENSE}",
             "Operating System :: OS Independent",
         ],
         python_requires=">=3.6"

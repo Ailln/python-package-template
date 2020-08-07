@@ -16,12 +16,12 @@
 
     ```bash
     cd python-package-template
-   
+
     # 1. 将下文中的 your_package_name 改成你的实际项目名称
     mv package_name your_package_name
-   
+
     # 2. 接下来修改 `setup.py /package_name/shell/usage.py`中的参数，里面有提示。
-    
+
     # 3. 最后 `README.md` 修改为你的项目介绍，也就是你当前在读的这个文本。
     ```
 
@@ -42,7 +42,7 @@
 
 ## 项目结构
 
-```
+```bash
 .
 ├── package_name # 你需要手动修改为你的项目名称
 │   ├── shell # 在命令行中执行的代码
@@ -63,6 +63,10 @@
 ## 许可
 
 [![](https://award.dovolopor.com?lt=License&rt=MIT&rbc=green)](./LICENSE)
+
+## TODO
+
+- [ ] 增加自动修改 `package name` 的脚本。
 
 ## 参考
 
