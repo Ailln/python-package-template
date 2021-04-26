@@ -1,10 +1,10 @@
 # Python Package Template
 
-📦 一个快速搭建 Python Package 的模版。
+📦 一个快速上传到 PyPI 的 Python Package 模版。
 
 > 上传到 PyPI 后可以使用 pip install 安装。
 
-## 使用方法
+## 1 使用方法
 
 1. 点击本项目右上角的绿色按钮 `Use this template`（使用此模板），输入名称和说明，完成创建；
 
@@ -29,7 +29,7 @@
 
 4. 编写你的 Package 代码；
 
-5. 上传到 PyPi（需要注册），参考[如何发布自己的包到 pypi](https://www.v2ai.cn/python/2018/07/30/PY-1.html)；
+5. 上传到 PyPi（需要注册），参考[如何发布自己的包到 pypi](https://www.v2ai.cn/2018/07/30/python/1-pypi/)；
 
     ```bash
     bash scripts/upload_pypi.sh
@@ -41,7 +41,7 @@
     git push
     ```
 
-## 项目结构
+## 2 项目结构
 
 ```
 .
@@ -62,16 +62,16 @@
 └── setup.py # 安装配置
 ```
 
-## TODO
+## 3 TODO
 
 - [ ] 增加自动修改 `package name` 的脚本。
 - [ ] 增加 test 相关代码。
 
-## 许可
+## 4 许可
 
 [![](https://award.dovolopor.com?lt=License&rt=MIT&rbc=green)](./LICENSE)
 
-## 参考
+## 5 参考
 
-- [如何从模板创建仓库？](https://help.github.com/cn/articles/creating-a-repository-from-a-template)
-- [如何发布自己的包到 pypi ？](https://www.v2ai.cn/python/2018/07/30/PY-1.html)
+- [如何从模板创建仓库？](https://docs.github.com/cn/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
+- [如何发布自己的包到 pypi ？](https://www.v2ai.cn/2018/07/30/python/1-pypi/)
