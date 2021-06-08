@@ -3,6 +3,7 @@ from setuptools import find_packages
 
 # change this.
 NAME = "your package name"
+VERSION = "0.0.1"
 AUTHOR = "your name"
 EMAIL = "your mail"
 URL = "your project url"
@@ -12,7 +13,7 @@ DESCRIPTION = "your project description"
 if __name__ == "__main__":
     setup(
         name=NAME,
-        version="0.0.1",
+        version=VERSION,
         author=AUTHOR,
         author_email=EMAIL,
         url=URL,
