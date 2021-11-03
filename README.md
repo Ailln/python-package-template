@@ -2,7 +2,7 @@
 
 📦 一个快速上传到 PyPI 的 Python Package 模版。
 
-> 上传到 PyPI 后可以使用 pip install 安装。
+> 上传到 PyPI 后可以使用 `pip install` 安装。
 
 ## 1 使用方法
 
@@ -22,12 +22,17 @@
     # 1. 将下文中的 your_package_name 改成你的实际项目名称
     mv package_name your_package_name
 
-    # 2. 接下来修改 `setup.py /package_name/shell/usage.py` 中的参数，里面有提示。
+    # 2. 接下来修改 `setup.py MANIFEST.in /package_name/shell/usage.py scripts/local_install.sh` 中的参数，里面有提示。
 
     # 3. 最后 `README.md` 修改为你的项目介绍，也就是你当前在读的这个文本。
     ```
 
-4. 编写你的 Package 代码；
+4. 编写你的 Package 代码，并进行测试。
+
+    ```bash
+    # 本地充分测试
+    bash scripts/local_test.sh
+    ```
 
 5. 上传到 PyPi（需要注册），参考[如何发布自己的包到 pypi](https://www.v2ai.cn/2018/07/30/python/1-pypi/)；
 
@@ -54,10 +59,12 @@
 │    │    └── temp.txt
 │    └── version.py # 版本号
 ├── scripts
-│    ├── local_install.sh
+│    ├── local_install.sh # 需要替换里面的 package_name
+│    ├── local_test.sh
 │    └── upload_pypi.sh
 ├── requirements.txt # 包依赖
-├── .gitignore
+├── .gitignore # git 忽略项
+├── MANIFEST.in # 要包含在 sdist 命令构建的分发中的文件列表。
 ├── LICENSE # 这里面的内容为本项目的 License，你需要手动替换它。
 └── setup.py # 安装配置
 ```

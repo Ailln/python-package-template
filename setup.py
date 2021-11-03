@@ -1,14 +1,18 @@
+import sys
 from setuptools import setup
 from setuptools import find_packages
 
 # change this.
 NAME = "your package name"
 VERSION = "0.0.1"
-AUTHOR = "your name"
-EMAIL = "your mail"
+AUTHOR = "your user name"
+EMAIL = "your email"
 URL = "your project url"
 LICENSE = "your license"
 DESCRIPTION = "your project description"
+
+if sys.version_info[:2] < (3, 6):
+    raise RuntimeError("Python version >= 3.6 required.")
 
 if __name__ == "__main__":
     setup(
