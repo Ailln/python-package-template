@@ -33,7 +33,7 @@ except FileNotFoundError:
 
 if __name__ == "__main__":
     setup(
-        package_name=NAME,
+        name=NAME,
         version=__version__,
         author=AUTHOR,
         author_email=EMAIL,
