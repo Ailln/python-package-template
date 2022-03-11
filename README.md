@@ -1,6 +1,6 @@
 # Python Package Template
 
-📦 一个快速上传到 PyPI 的 Python Package 模版。
+📦 一个快速上传到 [PyPI](https://pypi.org/) 的 Python Package 模版。
 
 > 上传到 PyPI 后可以使用 `pip install` 安装。
 
@@ -17,20 +17,22 @@
 3. 修改配置，文件中有提示；
 
     ```bash
-    cd python-package-template
+    cd your_package_name
 
-    # 1. 将下文中的 your_package_name 改成你的实际项目名称
-    mv package_name your_package_name
+    # 1. 替换默认项目名称 package_name 为你的项目名称
+    # Usage: bash scripts/set_package_name.sh os_name old_name new_name
+    # os_name 支持的有 `mac` 和 `linux`
+    # old_name 是 package_name
+    # new_name 是你的项目名称
+    bash scripts/set_package_name.sh mac package_name your_package_name
 
-    # 2. 接下来修改 `setup.py MANIFEST.in /package_name/shell/usage.py scripts/local_install.sh` 中的参数，里面有提示。
-
-    # 3. 最后 `README.md` 修改为你的项目介绍，也就是你当前在读的这个文本。
+    # 2. 将 `README.md` 修改为你的项目介绍，也就是你当前在读的这个文本。
     ```
 
 4. 编写你的 Package 代码，并进行测试。
 
     ```bash
-    # 本地充分测试
+    # 在本地进行充分测试
     bash scripts/local_test.sh
     ```
 
@@ -50,20 +52,20 @@
 
 ```
 .
-├── README.md # 项目文档
-├── package_name # 你需要手动修改为你的项目名称
+├── package_name # 项目名称
 │    ├── shell # 在命令行中执行的代码
 │    │    ├── __init__.py
 │    │    └── usage.py
-│    ├── src # 静态资源
-│    │    └── temp.txt
-│    └── version.py # 版本号
+│    └── src # 静态资源
+│          └── temp.txt
 ├── scripts
-│    ├── local_install.sh # 需要替换里面的 package_name
+│    ├── set_package_name.sh # 批量替换默认的项目名称
+│    ├── local_install.sh
 │    ├── local_test.sh
 │    └── upload_pypi.sh
+├── README.md # 项目文档
 ├── requirements.txt # 包依赖
-├── .gitignore # git 忽略项
+├── .gitignore # 忽略文件
 ├── MANIFEST.in # 要包含在 sdist 命令构建的分发中的文件列表。
 ├── LICENSE # 这里面的内容为本项目的 License，你需要手动替换它。
 └── setup.py # 安装配置
@@ -71,7 +73,6 @@
 
 ## 3 TODO
 
-- [ ] 增加自动修改 `package name` 的脚本。
 - [ ] 增加 test 相关代码。
 
 ## 4 许可
@@ -80,5 +81,6 @@
 
 ## 5 参考
 
+- [Packaging Python Projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
 - [如何从模板创建仓库？](https://docs.github.com/cn/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
 - [如何发布自己的包到 pypi ？](https://www.v2ai.cn/2018/07/30/python/1-pypi/)

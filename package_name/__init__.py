@@ -1,9 +1,8 @@
-from . import shell
-from . import version
+__version__ = "0.0.1"
 
-__version__ = version.VERSION
+from package_name import shell
 
 __all__ = [
+    "__version__",
     "shell",
-    "version"
 ]
