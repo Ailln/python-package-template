@@ -1,7 +1,6 @@
 import os
 import sys
-from setuptools import setup
-from setuptools import find_packages
+from setuptools import setup, find_packages
 
 NAME = "package_name"
 AUTHOR = "your user name"
@@ -17,11 +16,11 @@ try:
     lib_py = os.path.join(NAME, "__init__.py")
     with open(lib_py, "r", encoding="utf8") as f_v:
         v_line = ""
-        for l in f_v.readlines():
-            if l.startswith("__version__"):
-                v_line = l.strip()
+        for line in f_v.readlines():
+            if line.startswith("__version__"):
+                v_line = line.strip()
                 break
-        exec(v_line) # get __version__ from __init__.py
+        exec(v_line)  # get __version__ from __init__.py
 except FileNotFoundError:
     __version__ = "0.0.0"
 

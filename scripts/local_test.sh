@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # change to your conda path
 source ~/anaconda3/etc/profile.d/conda.sh
 

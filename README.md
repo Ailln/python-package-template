@@ -1,6 +1,6 @@
 # Python Package Template
 
-📦 一个快速上传到 [PyPI](https://pypi.org/) 的 Python Package 模版。
+📦 一个快速上传到 [PyPI](https://pypi.org/) 的 **Python Package** 模版。
 
 > 上传到 PyPI 后可以使用 `pip install` 安装。
 
@@ -31,18 +31,18 @@
 
 4. 编写你的 Package 代码，并进行测试。
 
-    ```bash
+    ```shell
     # 在本地进行充分测试
     bash scripts/local_test.sh
     ```
 
 5. 上传到 PyPi（需要注册），参考[如何发布自己的包到 pypi](https://www.v2ai.cn/2018/07/30/python/1-pypi/)；
 
-    ```bash
+    ```shell
     bash scripts/upload_pypi.sh
     ```
 
-6. 更新到 Github。
+6. 更新到 Github（非必须）。
 
     ```bash
     git push
@@ -52,19 +52,19 @@
 
 ```
 .
+├── README.md # 项目文档
 ├── package_name # 项目名称
 │    ├── shell # 在命令行中执行的代码
 │    │    ├── __init__.py
 │    │    └── usage.py
 │    └── src # 静态资源
 │          └── temp.txt
-├── scripts
+├── scripts # 一些常用脚本
 │    ├── set_package_name.sh # 批量替换默认的项目名称
-│    ├── local_install.sh
-│    ├── local_test.sh
-│    └── upload_pypi.sh
-├── README.md # 项目文档
-├── requirements.txt # 包依赖
+│    ├── local_install.sh # 本地安装
+│    ├── local_test.sh # 本地测试
+│    └── upload_pypi.sh # 上传到 pypi
+├── requirements.txt # 项目依赖
 ├── .gitignore # 忽略文件
 ├── MANIFEST.in # 要包含在 sdist 命令构建的分发中的文件列表。
 ├── LICENSE # 这里面的内容为本项目的 License，你需要手动替换它。

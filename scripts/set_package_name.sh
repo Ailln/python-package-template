@@ -4,7 +4,7 @@ os_name=$1
 old_name=$2
 new_name=$3
 
-if [ ! -n "$os_name" -o ! -n "$old_name" -o ! -n "$new_name" ]; then
+if [ -z "$os_name" ] || [ -z "$old_name" ] || [ -z "$new_name" ]; then
     echo "Usage: bash $0 os_name old_name new_name"
     exit 1
 else
@@ -19,11 +19,11 @@ else
             sed -i "" "s/${old_name}/${new_name}/g" setup.py
             sed -i "" "s/${old_name}/${new_name}/g" MANIFEST.in
 
-            mv ${old_name} ${new_name}
+            mv "${old_name}" "${new_name}"
 
-            sed -i "" "s/${old_name}/${new_name}/g" ./${new_name}/__init__.py
-            sed -i "" "s/${old_name}/${new_name}/g" ./${new_name}/shell/__init__.py
-            sed -i "" "s/${old_name}/${new_name}/g" ./${new_name}/shell/usage.py
+            sed -i "" "s/${old_name}/${new_name}/g" ./"${new_name}"/__init__.py
+            sed -i "" "s/${old_name}/${new_name}/g" ./"${new_name}"/shell/__init__.py
+            sed -i "" "s/${old_name}/${new_name}/g" ./"${new_name}"/shell/usage.py
 
             echo "> done"
             ;;
@@ -31,11 +31,11 @@ else
             sed -i "s/${old_name}/${new_name}/g" setup.py
             sed -i "s/${old_name}/${new_name}/g" MANIFEST.in
 
-            mv ${old_name} ${new_name}
+            mv "${old_name}" "${new_name}"
 
-            sed -i "s/${old_name}/${new_name}/g" ./${new_name}/__init__.py
-            sed -i "s/${old_name}/${new_name}/g" ./${new_name}/shell/__init__.py
-            sed -i "s/${old_name}/${new_name}/g" ./${new_name}/shell/usage.py
+            sed -i "s/${old_name}/${new_name}/g" ./"${new_name}"/__init__.py
+            sed -i "s/${old_name}/${new_name}/g" ./"${new_name}"/shell/__init__.py
+            sed -i "s/${old_name}/${new_name}/g" ./"${new_name}"/shell/usage.py
 
             echo "> done"
             ;;
